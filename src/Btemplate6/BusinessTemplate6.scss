@@ -1,0 +1,87 @@
+#BusinessT6Swiper {
+	.swiper_container {
+		width: 100%;
+		overflow: visible;
+
+		.swiper-slide-active {
+			width: 42.256rem;
+			height: 33.18081rem;
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transform: translate(15%, 150%);
+				width: 32.63275rem;
+				height: 5.501rem;
+				background: url("./assets/activeItemShadow.svg") center/cover no-repeat;
+				fill: #d6d6d6;
+				filter: blur(21.250024795532227px);
+			}
+		}
+
+		.swiper-button-prev {
+			width: 2.96131rem;
+			height: 2.96131rem;
+			transform: translateX(20rem);
+
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background: url("./assets/leftArrow.svg") center/cover no-repeat;
+			}
+		}
+		.swiper-button-next {
+			width: 2.96131rem;
+			height: 2.96131rem;
+			transform: translateX(-20rem);
+
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background: url("./assets/rightArrow.svg") center/cover no-repeat;
+			}
+		}
+	}
+}
+
+#BusinessT6Swiper{
+
+	.swiper_container1 {
+		padding: 0;
+		margin: 0;
+		// padding-right: 22vw;
+		.swiper-button-prev {
+			display: none;
+		}
+		.swiper-button-next {
+			display: none;
+		}
+	}
+}
+#carousel4 {
+	.alice-carousel__wrapper {
+		width: 100%;
+		// .alice-carousel__stage-item {
+
+		// }
+		// .__target {
+
+		// }
+	}
+	.alice-carousel__prev-btn {
+		display: none;
+	}
+
+	.alice-carousel__next-btn {
+		display: none;
+	}
+
+	.alice-carousel__dots {
+		display: none;
+	}
+}
