@@ -1,6 +1,3 @@
-Here's a detailed README file with emojis and ASCII diagram:
-
-```markdown
 # 🎨 BTemplate6 - React Application
 
 ## 📋 Project Overview
