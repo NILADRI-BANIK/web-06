@@ -1,13 +1,497 @@
+/* CSS Reset & Base Styles for Btemplate6 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Responsive font sizing based on viewport */
+@media (max-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  html {
+    font-size: 11px;
+  }
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  color: #000;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Root container */
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Prevent layout shift and overscroll */
+html,
+body {
+  overscroll-behavior: none;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: none;
+}
+
+/* Button reset and styling */
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 2px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Link styling */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Input reset */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 2px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Utility classes */
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Accessibility improvements */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.5);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+button,
+a,
+input,
+img {
+  transition: all 0.3s ease;
+}
+
+/* Prevent text selection on UI elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Loading state */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: wait;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Specific resolution optimizations */
+
+/* 1440x853 (Custom aspect ratio) */
+@media (min-width: 1440px) and (max-width: 1440px) and (min-height: 853px) and (max-height: 853px) {
+  html {
+    font-size: 15.5px;
+  }
+  
+  #root {
+    max-width: 1440px;
+    max-height: 853px;
+    margin: 0 auto;
+  }
+  
+  body {
+    overflow: hidden;
+  }
+}
+
+/* 1280x720 (16:9 HD) */
+@media (min-width: 1280px) and (max-width: 1280px) and (min-height: 720px) and (max-height: 720px) {
+  html {
+    font-size: 14.5px;
+  }
+  
+  #root {
+    max-width: 1280px;
+    max-height: 720px;
+    margin: 0 auto;
+  }
+  
+  body {
+    overflow: hidden;
+  }
+}
+
+/* Desktop Full HD (1920x1080) */
+@media (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+  
+  .container {
+    max-width: 1600px;
+  }
+}
+
+/* Large Desktop (2560x1440) */
+@media (min-width: 2560px) {
+  html {
+    font-size: 20px;
+  }
+  
+  .container {
+    max-width: 1920px;
+  }
+}
+
+/* Laptop (1366x768) */
+@media (min-width: 1366px) and (max-width: 1440px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Tablet landscape (1024x768) */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Tablet portrait (768x1024) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  html {
+    font-size: 13px;
+  }
+  
+  body {
+    height: 100dvh; /* Dynamic viewport height */
+  }
+}
+
+/* Mobile landscape (most phones) */
+@media (max-width: 768px) and (orientation: landscape) {
+  html {
+    font-size: 12px;
+  }
+  
+  body {
+    height: 100dvh;
+  }
+  
+  /* Adjust for landscape mode */
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Mobile portrait (375x667 - iPhone SE/8) */
+@media (max-width: 480px) and (orientation: portrait) {
+  html {
+    font-size: 12px;
+  }
+  
+  body {
+    height: 100dvh;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Small mobile (320px) */
+@media (max-width: 375px) {
+  html {
+    font-size: 11px;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* iPhone 14 Pro Max (430x932) */
+@media (max-width: 430px) and (min-height: 900px) {
+  body {
+    height: 100dvh;
+  }
+}
+
+/* iPad Pro (1024x1366) */
+@media (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  button,
+  .no-print {
+    display: none !important;
+  }
+  
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* High DPI displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+  
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  /* Keep light theme for this template */
+  body {
+    background: #ffffff;
+    color: #000000;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-padding-top: 2rem;
+}
+
+/* Custom fonts import (if needed) */
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Roboto:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500;600&family=Oooh+Baby&display=swap');
+
+/* Font face declarations */
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Ensure proper rendering on different devices */
+@supports (font-variation-settings: normal) {
+  body {
+    font-variation-settings: normal;
+  }
+}
+
+/* Fix for iOS Safari viewport height issues */
+@supports (-webkit-touch-callout: none) {
+  body {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media (max-width: 768px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Landscape orientation specific fixes */
+@media (orientation: landscape) and (max-height: 500px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+/* Ultra-wide monitors (21:9) */
+@media (min-aspect-ratio: 21/9) {
+  .container {
+    max-width: 1800px;
+  }
+}
+
+/* Handle notches and safe areas (iPhone X and newer) */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
 }
